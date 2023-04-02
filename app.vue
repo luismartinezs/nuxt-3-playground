@@ -1,5 +1,5 @@
 <template>
   <div>
-    <HelloWorld />
+    <HelloWorld foo="fooed" :bar="3" />
   </div>
 </template>
