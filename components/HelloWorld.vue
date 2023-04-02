@@ -1,8 +1,9 @@
 <script setup>
+import useCount from "@/composables/useCount"
+
 const msg = ref("World")
 const greeting = computed(() => `Hello ${msg.value}!`)
-const count = ref(1)
-const double = computed(() => count.value * 2)
+const { count, double } = useCount(1)
 </script>
 
 <template>
@@ -15,7 +16,7 @@ const double = computed(() => count.value * 2)
   </p>
 </template>
 
-<style>
+<style scoped>
 .greeting {
   color: red;
   font-weight: bold;
